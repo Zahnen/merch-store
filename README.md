@@ -28,6 +28,7 @@ Merch Store is a practice in implementing CRUD functionality within a React appl
 - JSX
 - React Framework v17.0
 - `create-react-app`
+- `npm install --save-exact react-scripts@3.2.0`
 - webpack
 - Babel
 - ESLint
@@ -39,6 +40,8 @@ Merch Store is a practice in implementing CRUD functionality within a React appl
 !["Application prototype"](https://i.imgur.com/oBXkGsi.png)
 
 ---
+
+### TODO - add install 3.2.0 note
 
 ### Available Scripts
 
