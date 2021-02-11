@@ -13,9 +13,8 @@ function ItemDetail(props){
         <h3>Out of stock! Better luck next time.</h3>
         : <h3>Quantity: {item.quantity}</h3>
       }
-
-      {/* button onClick="Restock" +1 */}
-      <button onClick={ () => props.OnClickingBuy } class="btn btn-success">Buy!</button>
+      {item.quantity > 0 ? <button onClick={ props.onClickingBuy } class="btn btn-success"> Buy!</button> : null }
+      <button onClick={ props.onClickingRestock } class="btn btn-success">Restock!</button>
       <button onClick={ props.onClickingEdit } class="btn btn-info">Update Item</button>
       <button onClick = {() => onClickingDelete(item.id)} class="btn btn-danger">Delete Item</button>
       <hr/>

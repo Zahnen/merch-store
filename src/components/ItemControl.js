@@ -77,15 +77,17 @@ class ItemControl extends React.Component {
     });
   }
 
-  // const selectedItem = this.state.selectedItem; // selects Item that is currently selected and viewed in the details page
-  // const newQuantity = Object.assign({}, selectedItem, {quantity: selectedItem.quantity - 1}); // targets the selectedItem and its quantity, and assigns it the new quantity
-  // const newItemList = this.state.masterItemList
-  //   .filter(item => item.id !== this.state.selectedItem.id)
-  //   .concat(newQuantity); // updates the Item list
-  // this.setState({
-  //     masterItemList: newItemList,
-  //     selectedItem: newQuantity
-  // });
+  handleRestockClick = () => {
+    const selectedItem = this.state.selectedItem;
+    const itemToBuy = Object.assign({}, selectedItem, {quantity: selectedItem.quantity + 1});
+    const editedMasterItemList = this.state.masterItemList
+      .filter(item => item.id !== this.state.selectedItem.id)
+      .concat(itemToBuy);
+    this.setState({
+      masterItemList: editedMasterItemList,
+      selectedItem: itemToBuy
+    });
+  }
 
   //Delete item
   handleDeletingItem = (id) => {
@@ -109,6 +111,7 @@ class ItemControl extends React.Component {
         item = {this.state.selectedItem}
         onClickingDelete = {this.handleDeletingItem}
         onClickingBuy = {this.handleBuyClick}
+        onClickingRestock = {this.handleRestockClick}
         onClickingEdit = {this.handleEditClick} />;
       buttonText = "Return to Item List";
     } else if (this.state.formVisibleOnPage) { // if on new form, show form and link to list
