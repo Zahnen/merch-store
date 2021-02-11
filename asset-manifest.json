@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/merch-store/static/css/main.a6b057c6.chunk.css",
+    "main.js": "/merch-store/static/js/main.441e265e.chunk.js",
+    "main.js.map": "/merch-store/static/js/main.441e265e.chunk.js.map",
+    "runtime-main.js": "/merch-store/static/js/runtime-main.75a9c5d7.js",
+    "runtime-main.js.map": "/merch-store/static/js/runtime-main.75a9c5d7.js.map",
+    "static/css/2.87a9c7a2.chunk.css": "/merch-store/static/css/2.87a9c7a2.chunk.css",
+    "static/js/2.ab3cfd73.chunk.js": "/merch-store/static/js/2.ab3cfd73.chunk.js",
+    "static/js/2.ab3cfd73.chunk.js.map": "/merch-store/static/js/2.ab3cfd73.chunk.js.map",
+    "static/js/3.e146751f.chunk.js": "/merch-store/static/js/3.e146751f.chunk.js",
+    "static/js/3.e146751f.chunk.js.map": "/merch-store/static/js/3.e146751f.chunk.js.map",
+    "index.html": "/merch-store/index.html",
+    "precache-manifest.9c2fbd318fe672128dec814971f0cc2c.js": "/merch-store/precache-manifest.9c2fbd318fe672128dec814971f0cc2c.js",
+    "service-worker.js": "/merch-store/service-worker.js",
+    "static/css/2.87a9c7a2.chunk.css.map": "/merch-store/static/css/2.87a9c7a2.chunk.css.map",
+    "static/css/main.a6b057c6.chunk.css.map": "/merch-store/static/css/main.a6b057c6.chunk.css.map",
+    "static/media/index.css": "/merch-store/static/media/bgimage.a717fe1a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75a9c5d7.js",
+    "static/css/2.87a9c7a2.chunk.css",
+    "static/js/2.ab3cfd73.chunk.js",
+    "static/css/main.a6b057c6.chunk.css",
+    "static/js/main.441e265e.chunk.js"
+  ]
+}
