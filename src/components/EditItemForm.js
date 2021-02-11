@@ -11,7 +11,7 @@ function EditItemForm (props) {
       name: event.target.name.value,
       imgUrl: event.target.imgUrl.value,
       description: event.target.description.value,
-      quantity: event.target.quantity.value,
+      quantity: parseInt(event.target.quantity.value),
       id: item.id});
   }
 

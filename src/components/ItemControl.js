@@ -11,7 +11,7 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false, //boolean to show if form is visible or not
-      createNewItem: false,
+      createNewItem: false, // do we need this?
       masterItemList: [], // master list of all item objects to display and render
       selectedItem: null, // holds an Item object to display details of a specific item
       editing: false
@@ -48,8 +48,8 @@ class ItemControl extends React.Component {
     }
   }
 
+  //Edit functions
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
@@ -60,9 +60,32 @@ class ItemControl extends React.Component {
     this.setState({
       masterItemList: editedMasterItemList,
       editing: false,
-      selectedItem: null
+      selectedItem: itemToEdit //this is needed for updating
+      // selectedItem: null //add this back in to redirect back to main pg
     });
   }
+
+  handleBuyClick = () => {
+    const selectedItem = this.state.selectedItem;
+    const itemToBuy = Object.assign({}, selectedItem, {quantity: selectedItem.quantity - 1});
+    const editedMasterItemList = this.state.masterItemList
+      .filter(item => item.id !== this.state.selectedItem.id)
+      .concat(itemToBuy);
+    this.setState({
+      masterItemList: editedMasterItemList,
+      selectedItem: itemToBuy
+    });
+  }
+
+  // const selectedItem = this.state.selectedItem; // selects Item that is currently selected and viewed in the details page
+  // const newQuantity = Object.assign({}, selectedItem, {quantity: selectedItem.quantity - 1}); // targets the selectedItem and its quantity, and assigns it the new quantity
+  // const newItemList = this.state.masterItemList
+  //   .filter(item => item.id !== this.state.selectedItem.id)
+  //   .concat(newQuantity); // updates the Item list
+  // this.setState({
+  //     masterItemList: newItemList,
+  //     selectedItem: newQuantity
+  // });
 
   //Delete item
   handleDeletingItem = (id) => {
@@ -85,6 +108,7 @@ class ItemControl extends React.Component {
       <ItemDetail
         item = {this.state.selectedItem}
         onClickingDelete = {this.handleDeletingItem}
+        onClickingBuy = {this.handleBuyClick}
         onClickingEdit = {this.handleEditClick} />;
       buttonText = "Return to Item List";
     } else if (this.state.formVisibleOnPage) { // if on new form, show form and link to list

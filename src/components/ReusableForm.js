@@ -19,6 +19,7 @@ function ReusableForm(props) {
           placeholder='Item Description' />
         <input class="form-control"
           type='number'
+          min='0'
           name='quantity'
           placeholder='Quantity Available' />
         <button type='submit' class="btn btn-info">{props.buttonText}</button>
