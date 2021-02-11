@@ -8,6 +8,29 @@
 
 ---
 
+//NUM PROP TYPE FROM FORM?
+
+Stretch
+IMPLEMENT CSS OBJECTS
+stretch - "cart" - inventory #s updating
+
+READ
+onclick to toggle form {_done_}
+
+CREATE
+onclick to create an item from form {_done_}
+
+READ- Details
+onclick toggle details {_done_}
+
+UPDATE
+update whole item {_done_}
+onclick for incrementing/decrementing quantity(inventory)
+
+DELETE
+onclick to delete an item && reduce quantity of item (inventory) {_done_}
+
+
 ## Description
 Merch Store is a practice in implementing CRUD functionality within a React application. Users can create, read, update, and delete items in a webstore for a fictional band. The webstore will keep track of inventory based on "purchases" and "restocks".
 

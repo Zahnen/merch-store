@@ -11,6 +11,7 @@ function ItemDetail(props){
       <img src={item.imgUrl} width="180px" alt="Merch Item"/>
       <h3><em>{item.description}</em></h3>
       <h3>Quantity: {item.quantity}</h3>
+      <button onClick={ props.onClickingEdit } class="btn btn-info">Update Ticket</button>
       <button onClick = {() => onClickingDelete(item.id)} class="btn btn-danger">Delete Item</button>
       <hr/>
     </>
@@ -19,7 +20,8 @@ function ItemDetail(props){
 
 ItemDetail.propTypes = {
   item: PropTypes.object,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func
 }
 
 export default ItemDetail;

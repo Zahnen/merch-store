@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
+import ReusableForm from "./ReusableForm";
 
 function NewItemForm(props){
 
@@ -11,26 +12,9 @@ function NewItemForm(props){
 
   return(
     <>
-    <h3 style={{textAlign: 'center', letterSpacing: '1px'}}>Add a New Merch Item</h3>
-      <form class="form-group" style={{width: '36rem;'}} onSubmit={handleNewItemFormSubmission}>
-        <input class="form-control"
-          type='text'
-          name='name'
-          placeholder='Item Name' />
-        <input class="form-control"
-          type='text'
-          name='imgUrl'
-          placeholder='Image URL (ends in .png, .jpg, etc)' />
-        <input class="form-control"
-          type='text'
-          name='description'
-          placeholder='Item Description' />
-        <input class="form-control"
-          type='number'
-          name='quantity'
-          placeholder='Quantity Available' />
-        <button type='submit' class="btn btn-outline-info">Submit Item</button>
-      </form>
+      <ReusableForm
+        formSubmissionHandler={handleNewItemFormSubmission}
+        buttonText="Submit" />
     </>
   );
 }
